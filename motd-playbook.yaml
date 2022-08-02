@@ -1,5 +1,5 @@
 ---
-- name: Import motd file playbook
+- name: Import motd file playbook and run it
   hosts: "{{ servidores }}"
   become: yes
   remote_user: ec2-user
