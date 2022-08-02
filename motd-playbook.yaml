@@ -1,0 +1,11 @@
+---
+- name: Import motd file playbook
+  hosts: "{{ servidores }}"
+  become: yes
+  remote_user: ec2-user
+
+  vars: 
+    custom_var: "{{ ansible_hostname }}"
+  tasks:
+  - include_tasks: tasks/motd-template.yml
+  - include_tasks: tasks/create-dir.yaml

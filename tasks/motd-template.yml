@@ -1,0 +1,6 @@
+- name: Copy template with owner and permissions
+  template:
+    src: ../files/motd-template
+    dest: /etc/motd
+    owner: root
+    group: root

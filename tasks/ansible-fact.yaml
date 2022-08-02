@@ -1,0 +1,13 @@
+- name: Create a file named redhat
+  file:
+    path: /root/redhat
+    mode: '0755'
+    state: touch
+  when: ansible_os_family == "RedHat"
+
+- name: Create a file named debian
+  file:
+    path: /root/debian
+    mode: '0755'
+    state: touch
+  when: ansible_os_family == "Debian"

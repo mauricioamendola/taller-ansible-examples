@@ -1,0 +1,6 @@
+- name: Copy file with owner and permissions
+  copy:
+    src: ../files/motd
+    dest: /etc/motd
+    owner: root
+    group: root
